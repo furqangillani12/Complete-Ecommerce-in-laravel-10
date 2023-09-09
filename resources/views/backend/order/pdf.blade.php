@@ -71,8 +71,7 @@
 </style>
   <div class="invoice-header">
     <div class="float-left site-logo">
-      <img src="{{asset('backend/img/logo.png')}}" alt="">
-    </div>
+      <img src="{{asset('backend/img/logo.pngV
     <div class="float-right site-address">
       <h4>{{env('APP_NAME')}}</h4>
       <p>{{env('APP_ADDRESS')}}</p>
@@ -119,7 +118,7 @@
       </thead>
       <tbody>
       @foreach($order->cart_info as $cart)
-      @php 
+      @php
         $product=DB::table('products')->select('title')->where('id',$cart->product_id)->get();
       @endphp
         <tr>
